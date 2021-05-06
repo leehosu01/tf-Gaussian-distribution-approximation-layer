@@ -38,6 +38,11 @@ activation-Softmax
 
 ![(\mu_i, s_i) \xrightarrow{softmax} {(\frac{E(\exp(N(\mu_i, s_i)))}{G_\mu}, \frac{V(\exp(N(\mu_i, s_i)))}{G_\mu})}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%28%5Cmu_i%2C+s_i%29+%5Cxrightarrow%7Bsoftmax%7D+%7B%28%5Cfrac%7BE%28%5Cexp%28N%28%5Cmu_i%2C+s_i%29%29%29%7D%7BG_%5Cmu%7D%2C+%5Cfrac%7BV%28%5Cexp%28N%28%5Cmu_i%2C+s_i%29%29%29%7D%7BG_%5Cmu%7D%29%7D)
 
+activation-Sigmoid
+----------------------------------
+> modify definition from original sigmoid(=logit) function (will update)
+
+![(\mu, s) \xrightarrow{softmax} {(\frac{E(\exp(N(\mu, s)))}{E(\exp(N(\mu, s))) + E(\exp(N(0, s)))}, \frac{V(\exp(N(\mu, s)))}{E(\exp(N(\mu, s))) + E(\exp(N(0, s)))})}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%28%5Cmu%2C+s%29+%5Cxrightarrow%7Bsoftmax%7D+%7B%28%5Cfrac%7BE%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29%7D%7BE%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29+%2B+E%28%5Cexp%28N%280%2C+s%29%29%29%7D%2C+%5Cfrac%7BV%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29%7D%7BE%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29+%2B+E%28%5Cexp%28N%280%2C+s%29%29%29%7D%29%7D)
 
 
 loss 
