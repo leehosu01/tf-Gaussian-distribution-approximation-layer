@@ -40,10 +40,9 @@ activation-Softmax
 
 activation-Sigmoid
 ----------------------------------
-> modify definition from original sigmoid(=logit) function (will update)
-
-![(\mu, s) \xrightarrow{softmax} {(\frac{E(\exp(N(\mu, s)))}{E(\exp(N(\mu, s))) + E(\exp(N(0, s)))}, \frac{V(\exp(N(\mu, s)))}{E(\exp(N(\mu, s))) + E(\exp(N(0, s)))})}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%28%5Cmu%2C+s%29+%5Cxrightarrow%7Bsoftmax%7D+%7B%28%5Cfrac%7BE%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29%7D%7BE%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29+%2B+E%28%5Cexp%28N%280%2C+s%29%29%29%7D%2C+%5Cfrac%7BV%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29%7D%7BE%28%5Cexp%28N%28%5Cmu%2C+s%29%29%29+%2B+E%28%5Cexp%28N%280%2C+s%29%29%29%7D%29%7D)
-
+![\begin{equation}
+\int_x sigmoid(x) \mathcal{N}(x; \mu, \sigma^2) \approx \int_x \Phi(\lambda x) \mathcal{N}(x; \mu, \sigma^2) = \Phi\left(\frac{\lambda \mu}{\sqrt{1 + \lambda^2 \sigma^2}}\right).
+\end{equation}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Bequation%7D%0A%5Cint_x+sigmoid%28x%29+%5Cmathcal%7BN%7D%28x%3B+%5Cmu%2C+%5Csigma%5E2%29+%5Capprox+%5Cint_x+%5CPhi%28%5Clambda+x%29+%5Cmathcal%7BN%7D%28x%3B+%5Cmu%2C+%5Csigma%5E2%29+%3D+%5CPhi%5Cleft%28%5Cfrac%7B%5Clambda+%5Cmu%7D%7B%5Csqrt%7B1+%2B+%5Clambda%5E2+%5Csigma%5E2%7D%7D%5Cright%29.%0A%5Cend%7Bequation%7D)
 
 loss 
 -------------------------------------
@@ -64,3 +63,13 @@ bias    = (0, 0)
 
 
 <!--make LaTeX code to URL from https://tex-image-link-generator.herokuapp.com/-->
+## References
+<a id="1">[1]</a> 
+@MISC {1994805,
+    TITLE = {Expected value of applying the sigmoid function to a normal distribution},
+    AUTHOR = {Smoke (https://math.stackexchange.com/users/377538/smoke)},
+    HOWPUBLISHED = {Mathematics Stack Exchange},
+    NOTE = {URL:https://math.stackexchange.com/q/1994805 (version: 2016-11-01)},
+    EPRINT = {https://math.stackexchange.com/q/1994805},
+    URL = {https://math.stackexchange.com/q/1994805}
+}
